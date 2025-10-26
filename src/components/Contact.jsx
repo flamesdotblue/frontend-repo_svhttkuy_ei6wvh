@@ -34,12 +34,12 @@ export default function Contact() {
           className="space-y-4"
         >
           <h2 className="text-3xl font-bold">Let’s work together</h2>
-          <p className="text-muted-foreground">Have a question or proposal, or just want to say hello? Fill out the form, and I’ll get back to you soon.</p>
+          <p className="text-slate-600 dark:text-slate-400">Have a question or proposal, or just want to say hello? Fill out the form, and I’ll get back to you soon.</p>
           <div className="flex items-center gap-3 pt-2">
-            <a aria-label="Email" className="p-2 rounded-md border border-border hover:bg-muted" href="mailto:your.email@example.com"><Mail size={18} /></a>
-            <a aria-label="GitHub" className="p-2 rounded-md border border-border hover:bg-muted" href="https://github.com/" target="_blank" rel="noreferrer"><Github size={18} /></a>
-            <a aria-label="LinkedIn" className="p-2 rounded-md border border-border hover:bg-muted" href="https://linkedin.com/" target="_blank" rel="noreferrer"><Linkedin size={18} /></a>
-            <a aria-label="Twitter" className="p-2 rounded-md border border-border hover:bg-muted" href="https://twitter.com/" target="_blank" rel="noreferrer"><Twitter size={18} /></a>
+            <a aria-label="Email" className="p-2 rounded-md border border-slate-200 dark:border-slate-800 hover:bg-slate-100/70 dark:hover:bg-slate-800/60" href="mailto:your.email@example.com"><Mail size={18} /></a>
+            <a aria-label="GitHub" className="p-2 rounded-md border border-slate-200 dark:border-slate-800 hover:bg-slate-100/70 dark:hover:bg-slate-800/60" href="https://github.com/" target="_blank" rel="noreferrer"><Github size={18} /></a>
+            <a aria-label="LinkedIn" className="p-2 rounded-md border border-slate-200 dark:border-slate-800 hover:bg-slate-100/70 dark:hover:bg-slate-800/60" href="https://linkedin.com/" target="_blank" rel="noreferrer"><Linkedin size={18} /></a>
+            <a aria-label="Twitter" className="p-2 rounded-md border border-slate-200 dark:border-slate-800 hover:bg-slate-100/70 dark:hover:bg-slate-800/60" href="https://twitter.com/" target="_blank" rel="noreferrer"><Twitter size={18} /></a>
           </div>
         </motion.div>
 
@@ -49,7 +49,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="rounded-xl border border-border p-6 bg-card space-y-4"
+          className="rounded-xl border border-slate-200/70 dark:border-slate-800 p-6 bg-white/70 dark:bg-slate-900/60 space-y-4"
         >
           <div>
             <label className="block text-sm mb-1">Name</label>
@@ -57,7 +57,7 @@ export default function Contact() {
               type="text"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full rounded-md border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/60 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="Your name"
               required
             />
@@ -69,7 +69,7 @@ export default function Contact() {
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full rounded-md border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/60 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="you@example.com"
               required
             />
@@ -81,13 +81,13 @@ export default function Contact() {
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               rows={5}
-              className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full rounded-md border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/60 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
               placeholder="Tell me about your project"
               required
             />
             {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
           </div>
-          <button type="submit" className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition w-full">
+          <button type="submit" className="inline-flex items-center justify-center px-5 py-3 rounded-md text-white bg-gradient-to-r from-teal-500 to-indigo-500 hover:opacity-95 transition w-full">
             Send Message
           </button>
         </motion.form>
